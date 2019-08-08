@@ -10,33 +10,33 @@
 </head>
 
 <body>
-    <form>
+    <form id="myForm"  action="#">
         <div class="row">
             <div class="column">
                 <table>
                     <tbody>
                         <tr>
                             <td>
-                                <input type="text" placeholder="Name" name="name" required="required" />
+                                <input id="userName" type="text" placeholder="Name" name="name" required="required" />
                             </td>
                         </tr>
 
                         <tr>
                             <td>
-                                <input type="text" placeholder="Email" name="email" required="required" />
+                                <input id="email" type="text" placeholder="Email" name="email" required="required" />
                             </td>
                         </tr>
 
                         <tr>
                             <td>
-                                <input type="text" placeholder="Phone" name="phone" required="required" />
+                                <input id="phone" type="text" placeholder="Phone" name="phone" required="required" />
                             </td>
                         </tr>
 
                         <tr>
 
                             <td>
-                                <textarea rows="4" cols="50"
+                                <textarea id="notes" name="notes" rows="4" cols="50"
                                     placeholder="Special notes, concerns, or requirements"></textarea>
                             </td>
                         </tr>
@@ -47,26 +47,29 @@
             </div>
             <div class="column">
                 <p>What is the best way to reach you?</p>
-                <input type="radio" name="contact" value="phone"> Phone<br>
-                <input type="radio" name="contact" value="email"> Email<br>
+                <input id="radio1" type="radio" name="contact" value="phone"> Phone<br>
+                <input id="radio2" type="radio" name="contact" value="email"> Email<br>
                 <p>Days of the week you are available for appointment:</p>
-                <input type="checkbox" name="days" value="monday"> Monday<br>
-                <input type="checkbox" name="days" value="tuesday"> Tuesday<br>
-                <input type="checkbox" name="days" value="wednesday"> Wednesday<br>
-                <input type="checkbox" name="days" value="thursday"> Thursday<br>
-                <input type="checkbox" name="days" value="friday"> Friday<br>
+                <input id="check1" type="checkbox" name="days" value="monday"> Monday<br>
+                <input id="check2" type="checkbox" name="days" value="tuesday"> Tuesday<br>
+                <input id="check3" type="checkbox" name="days" value="wednesday"> Wednesday<br>
+                <input id="check4" type="checkbox" name="days" value="thursday"> Thursday<br>
+                <input id="check5" type="checkbox" name="days" value="friday"> Friday<br>
                 <p>Best time of day for your appointment:</p>
-                <input type="checkbox" name="time" value="morning"> Morning<br>
-                <input type="checkbox" name="time" value="afternoon"> Afternoon<br>
+                <input id="checkA" type="checkbox" name="time" value="morning"> Morning<br>
+                <input id="checkB" type="checkbox" name="time" value="afternoon"> Afternoon<br>
             </div>
         </div>
         <hr>
         <div class="bottom-div">
-            <button class="submit" type="submit" name="submit">Request My Appointment</button>
+            <!-- <button id="submit" onclick="validateappointmentform()" class="submit" type="submit" name="submit">Request My Appointment</button> -->
+            <button id="submit" onclick="valid()" class="submit" type="submit" name="submit">Request My Appointment</button>
+            <p id="copy">Copyright &copy; 2019 Irene Nyakate</p>
+            <p id="copy1">All Rights Reserved</p>
         </div>
 
     </form>
-
+    <script src="homeCare.js"></script>
 </body>
 
 </html>
